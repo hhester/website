@@ -1,0 +1,1337 @@
+Last login: Mon Jan 23 1grc-grcgrc-grc-grc-rgrc-grggggggggggrgrggrggrggrc-russia:~ hhester$ git status
+fatal: Not a git repository (or any of the parent directories): .git
+grc-russia:~ hhester$ ls
+Applications	Downloads	Music		repos
+Desktop		Library		Pictures
+Documents	Movies		Public
+grc-russia:~ hhester$ cd repos
+grc-russia:repos hhester$ ls
+website
+grc-russia:repos hhester$ cd website
+grc-russia:website hhester$ ls
+DS_Store			baz
+README.md			foo
+Terminal Saved Output.txt	hhester_GIT lab.pdf
+Terminal Saved Outputv2.txt	images
+about.html			index.html
+bar
+grc-russia:website hhester$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   hhester_GIT lab.pdf
+	deleted:    ~$itignore.docx
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Terminal Saved Outputv2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+grc-russia:website hhester$ git commit -a
+Aborting commit due to empty commit message.
+grc-russia:website hhester$ git add Terminal Saved Outputv3.txt
+fatal: pathspec 'Terminal' did not match any files
+grc-russia:website hhester$ git push
+To https://github.com/hhester/website.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/hhester/website.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+grc-russia:website hhester$ ls
+DS_Store			baz
+README.md			foo
+Terminal Saved Output.txt	hhester_GIT lab.pdf
+Terminal Saved Outputv2.txt	images
+about.html			index.html
+bar
+grc-russia:website hhester$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   hhester_GIT lab.pdf
+	deleted:    ~$itignore.docx
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Terminal Saved Outputv2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+grc-russia:website hhester$ git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+grc-russia:website hhester$ git diff master
+diff --git a/hhester_GIT lab.pdf b/hhester_GIT lab.pdf
+index 563dc8c..fbfd8b2 100644
+Binary files a/hhester_GIT lab.pdf and b/hhester_GIT lab.pdf differ
+diff --git a/~$itignore.docx b/~$itignore.docx
+deleted file mode 100644
+index 01fb715..0000000
+Binary files a/~$itignore.docx and /dev/null differ
+grc-russia:website hhester$ git checkout master
+M	hhester_GIT lab.pdf
+D	~$itignore.docx
+Already on 'master'
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+grc-russia:website hhester$ git merge about-page
+Already up-to-date.
+grc-russia:website hhester$ git push
+To https://github.com/hhester/website.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/hhester/website.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+grc-russia:website hhester$ git branch -d about-page
+Deleted branch about-page (was 5e22bd5).
+grc-russia:website hhester$ git branch
+* master
+grc-russia:website hhester$ git branch test-branch
+grc-russia:website hhester$ git branch
+* master
+  test-branch
+grc-russia:website hhester$ cd test-branch
+-bash: cd: test-branch: No such file or directory
+grc-russia:website hhester$ ls
+DS_Store			baz
+README.md			foo
+Terminal Saved Output.txt	hhester_GIT lab.pdf
+Terminal Saved Outputv2.txt	images
+about.html			index.html
+bar
+grc-russia:website hhester$ git branch
+* master
+  test-branch
+grc-russia:website hhester$ touch test-branch
+grc-russia:website hhester$ ls
+DS_Store			baz
+README.md			foo
+Terminal Saved Output.txt	hhester_GIT lab.pdf
+Terminal Saved Outputv2.txt	images
+about.html			index.html
+bar				test-branch
+grc-russia:website hhester$ git branch -d
+fatal: branch name required
+grc-russia:website hhester$ got branch -D
+-bash: got: command not found
+grc-russia:website hhester$ git branch
+* master
+  test-branch
+grc-russia:website hhester$ git branch test-branch -D
+Deleted branch test-branch (was 5e22bd5).
+grc-russia:website hhester$ tail about.html
+        <title>About Us</title>
+    </head>
+    <body>
+        <h1>About</h1>
+        <p> 
+            This site is a sample project for the <strong>awesome </strong> Git 
+            tutorial <em>Learn Enough™ Git to Be Dangerous</em>
+        </p>
+    </body>
+</html>grc-russia:website hhester$ echo>>about.html
+grc-russia:website hhester$ echo > about.html
+grc-russia:website hhester$ cat about.html
+
+grc-russia:website hhester$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   about.html
+	modified:   hhester_GIT lab.pdf
+	deleted:    ~$itignore.docx
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Terminal Saved Outputv2.txt
+	test-branch
+
+no changes added to commit (use "git add" and/or "git commit -a")
+grc-russia:website hhester$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   about.html
+	modified:   hhester_GIT lab.pdf
+	deleted:    ~$itignore.docx
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Terminal Saved Outputv2.txt
+	test-branch
+
+no changes added to commit (use "git add" and/or "git commit -a")
+grc-russia:website hhester$ git diff
+diff --git a/about.html b/about.html
+index 4b3e28d..8b13789 100644
+--- a/about.html
++++ b/about.html
+@@ -1,13 +1 @@
+-<!DOCTYPE html>
+-<html>
+-    <head>
+-        <title>About Us</title>
+-    </head>
+-    <body>
+-        <h1>About</h1>
+-        <p> 
+-            This site is a sample project for the <strong>awesome </strong> Git 
+-            tutorial <em>Learn Enough™ Git to Be Dangerous</em>
+-        </p>
+-    </body>
+-</html>
+\ No newline at end of file
++
+diff --git a/hhester_GIT lab.pdf b/hhester_GIT lab.pdf
+index 563dc8c..149dac5 100644
+Binary files a/hhester_GIT lab.pdf and b/hhester_GIT lab.pdf differ
+...skipping...
+
+                   SUMMARY OF LESS COMMANDS
+
+      Commands marked with * may be preceded by a number, N.
+      Notes in parentheses indicate the behavior if N is given.
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.
+
+  h  H                 Display this help.
+  q  :q  Q  :Q  ZZ     Exit.
+ ---------------------------------------------------------------------------
+
+                           MOVING
+
+  e  ^E  j  ^N  CR  *  Forward  one line   (or N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or N lines).
+  b  ^B  ESC-v      *  Backward one window (or N lines).
+  z                 *  Forward  one window (and set window to N).
+  w                 *  Backward one window (and set window to N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  d  ^D             *  Forward  one half-window (and set half-window to N).
+  u  ^U             *  Backward one half-window (and set half-window to N).
+  ESC-)  RightArrow *  Left  one half screen width (or N positions).
+  ESC-(  LeftArrow  *  Right one half screen width (or N positions).
+  F                    Forward forever; like "tail -f".
+  r  ^R  ^L            Repaint screen.
+  R                    Repaint screen, discarding buffered input.
+        ---------------------------------------------------
+        Default "window" is the screen height.
+        Default "half-window" is half of the screen height.
+ ---------------------------------------------------------------------------
+
+                          SEARCHING
+
+  /pattern          *  Search forward for (N-th) matching line.
+  ?pattern          *  Search backward for (N-th) matching line.
+  n                 *  Repeat previous search (for N-th occurrence).
+  N                 *  Repeat previous search in reverse direction.
+  ESC-n             *  Repeat previous search, spanning files.
+  ESC-N             *  Repeat previous search, reverse dir. & spanning files.
+  ESC-u                Undo (toggle) search highlighting.
+  &pattern          *  Display only matching lines
+        ---------------------------------------------------
+        A search pattern may be preceded by one or more of:
+        ^N or !  Search for NON-matching lines.
+        ^E or *  Search multiple files (pass thru END OF FILE).
+        ^F or @  Start search at FIRST file (for /) or last file (for ?).
+        ^K       Highlight matches, but don't move (KEEP position).
+        ^R       Don't use REGULAR EXPRESSIONS.
+ ---------------------------------------------------------------------------
+
+                           JUMPING
+
+  g  <  ESC-<       *  Go to first line in file (or line N).
+  G  >  ESC->       *  Go to last line in file (or line N).
+  p  %              *  Go to beginning of file (or N percent into file).
+  t                 *  Go to the (N-th) next tag.
+  T                 *  Go to the (N-th) previous tag.
+  {  (  [           *  Find close bracket } ) ].
+  }  )  ]           *  Find open bracket { ( [.
+  ESC-^F <c1> <c2>  *  Find close bracket <c2>.
+  ESC-^B <c1> <c2>  *  Find open bracket <c1> 
+        ---------------------------------------------------
+        Each "find close bracket" command goes forward to the close bracket 
+          matching the (N-th) open bracket in the top line.
+        Each "find open bracket" command goes backward to the open bracket 
+          matching the (N-th) close bracket in the bottom line.
+
+  m<letter>            Mark the current position with <letter>.
+  '<letter>            Go to a previously marked position.
+  ''                   Go to the previous position.
+  ^X^X                 Same as '.
+        ---------------------------------------------------
+        A mark is any upper-case or lower-case letter.
+        Certain marks are predefined:
+             ^  means  beginning of the file
+             $  means  end of the file
+ ---------------------------------------------------------------------------
+
+                        CHANGING FILES
+
+  :e [file]            Examine a new file.
+  ^X^V                 Same as :e.
+  :n                *  Examine the (N-th) next file from the command line.
+  :p                *  Examine the (N-th) previous file from the command line.
+  :x                *  Examine the first (or N-th) file from the command line.
+  :d                   Delete the current file from the command line list.
+  =  ^G  :f            Print current file name.
+ ---------------------------------------------------------------------------
+
+                    MISCELLANEOUS COMMANDS
+
+  -<flag>              Toggle a command line option [see OPTIONS below].
+  --<name>             Toggle a command line option, by name.
+  _<flag>              Display the setting of a command line option.
+  __<name>             Display the setting of an option, by name.
+  +cmd                 Execute the less cmd each time a new file is examined.
+
+  !command             Execute the shell command with $SHELL.
+  |Xcommand            Pipe file between current pos & mark X to shell command.
+  v                    Edit the current file with $VISUAL or $EDITOR.
+  V                    Print version number of "less".
+ ---------------------------------------------------------------------------
+
+                           OPTIONS
+
+        Most options may be changed either on the command line,
+        or from within less by using the - or -- command.
+        Options may be given in one of two forms: either a single
+        character preceded by a -, or a name preceded by --.
+
+  -?  ........  --help
+                  Display help (from command line).
+  -a  ........  --search-skip-screen
+                  Search skips current screen.
+  -A  ........  --SEARCH-SKIP-SCREEN
+                  Search starts just after target line.
+  -b [N]  ....  --buffers=[N]
+                  Number of buffers.
+  -B  ........  --auto-buffers
+                  Don't automatically allocate buffers for pipes.
+  -c  ........  --clear-screen
+                  Repaint by clearing rather than scrolling.
+  -d  ........  --dumb
+                  Dumb terminal.
+  -D [xn.n]  .  --color=xn.n
+                  Set screen colors. (MS-DOS only)
+  -e  -E  ....  --quit-at-eof  --QUIT-AT-EOF
+                  Quit at end of file.
+  -f  ........  --force
+                  Force open non-regular files.
+  -F  ........  --quit-if-one-screen
+                  Quit if entire file fits on first screen.
+  -g  ........  --hilite-search
+                  Highlight only last match for searches.
+  -G  ........  --HILITE-SEARCH
+                  Don't highlight any matches for searches.
+  -h [N]  ....  --max-back-scroll=[N]
+                  Backward scroll limit.
+  -i  ........  --ignore-case
+                  Ignore case in searches that do not contain uppercase.
+  -I  ........  --IGNORE-CASE
+                  Ignore case in all searches.
+  -j [N]  ....  --jump-target=[N]
+                  Screen position of target lines.
+  -J  ........  --status-column
+                  Display a status column at left edge of screen.
+  -k [file]  .  --lesskey-file=[file]
+                  Use a lesskey file.
+  -K            --quit-on-intr
+                  Exit less in response to ctrl-C.
+  -L  ........  --no-lessopen
+                  Ignore the LESSOPEN environment variable.
+  -m  -M  ....  --long-prompt  --LONG-PROMPT
+                  Set prompt style.
+  -n  -N  ....  --line-numbers  --LINE-NUMBERS
+                  Don't use line numbers.
+  -o [file]  .  --log-file=[file]
+                  Copy to log file (standard input only).
+  -O [file]  .  --LOG-FILE=[file]
+                  Copy to log file (unconditionally overwrite).
+  -p [pattern]  --pattern=[pattern]
+                  Start at pattern (from command line).
+  -P [prompt]   --prompt=[prompt]
+                  Define new prompt.
+  -q  -Q  ....  --quiet  --QUIET  --silent --SILENT
+                  Quiet the terminal bell.
+  -r  -R  ....  --raw-control-chars  --RAW-CONTROL-CHARS
+                  Output "raw" control characters.
+  -s  ........  --squeeze-blank-lines
+                  Squeeze multiple blank lines.
+  -S  ........  --chop-long-lines
+                  Chop (truncate) long lines rather than wrapping.
+  -t [tag]  ..  --tag=[tag]
+                  Find a tag.
+  -T [tagsfile] --tag-file=[tagsfile]
+                  Use an alternate tags file.
+  -u  -U  ....  --underline-special  --UNDERLINE-SPECIAL
+                  Change handling of backspaces.
+  -V  ........  --version
+                  Display the version number of "less".
+  -w  ........  --hilite-unread
+                  Highlight first new line after forward-screen.
+  -W  ........  --HILITE-UNREAD
+                  Highlight first new line after any forward movement.
+  -x [N[,...]]  --tabs=[N[,...]]
+                  Set tab stops.
+  -X  ........  --no-init
+                  Don't use termcap init/deinit strings.
+  -y [N]  ....  --max-forw-scroll=[N]
+                  Forward scroll limit.
+  -z [N]  ....  --window=[N]
+                  Set size of window.
+  -" [c[c]]  .  --quotes=[c[c]]
+                  Set shell quote characters.
+  -~  ........  --tilde
+                  Don't display tildes after end of file.
+  -# [N]  ....  --shift=[N]
+                  Horizontal scroll amount (0 = one half screen width)
+      ........  --no-keypad
+                  Don't send termcap keypad init/deinit strings.
+      ........  --follow-name
+                  The F command changes files if the input file is renamed.
+
+
+ ---------------------------------------------------------------------------
+
+                          LINE EDITING
+
+        These keys can be used to edit text being entered 
+        on the "command line" at the bottom of the screen.
+
+ RightArrow                       ESC-l     Move cursor right one character.
+ LeftArrow                        ESC-h     Move cursor left one character.
+ ctrl-RightArrow  ESC-RightArrow  ESC-w     Move cursor right one word.
+ ctrl-LeftArrow   ESC-LeftArrow   ESC-b     Move cursor left one word.
+ HOME                             ESC-0     Move cursor to start of line.
+ END                              ESC-$     Move cursor to end of line.
+ BACKSPACE                                  Delete char to left of cursor.
+ DELETE                           ESC-x     Delete char under cursor.
+ ctrl-BACKSPACE   ESC-BACKSPACE             Delete word to left of cursor.
+ ctrl-DELETE      ESC-DELETE      ESC-X     Delete word under cursor.
+ ctrl-U           ESC (MS-DOS only)         Delete entire line.
+ UpArrow                          ESC-k     Retrieve previous command line.
+ DownArrow                        ESC-j     Retrieve next command line.
+ TAB                                        Complete filename & cycle.
+ SHIFT-TAB                        ESC-TAB   Complete filename & reverse cycle.
+ ctrl-L                                     Complete filename, list all.
+
+
+HELP -- END -- Press g to see it again, or q when done...skipping...
+diff --git a/about.html b/about.html
+index 4b3e28d..8b13789 100644
+--- a/about.html
++++ b/about.html
+@@ -1,13 +1 @@
+-<!DOCTYPE html>
+-<html>
+-    <head>
+-        <title>About Us</title>
+-    </head>
+-    <body>
+-        <h1>About</h1>
+-        <p> 
+-            This site is a sample project for the <strong>awesome </strong> Git 
+-            tutorial <em>Learn Enough™ Git to Be Dangerous</em>
+-        </p>
+-    </body>
+-</html>
+\ No newline at end of file
++
+diff --git a/hhester_GIT lab.pdf b/hhester_GIT lab.pdf
+index 563dc8c..149dac5 100644
+Binary files a/hhester_GIT lab.pdf and b/hhester_GIT lab.pdf differ
+grc-russia:website hhester$ git checkout -f
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+grc-russia:website hhester$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Terminal Saved Outputv2.txt
+	test-branch
+
+nothing added to commit but untracked files present (use "git add" to track)
+grc-russia:website hhester$ git checkout -b test-branch
+Switched to a new branch 'test-branch'
+grc-russia:website hhester$ echo>about.html
+grc-russia:website hhester$ git commit -am "Oops"
+[test-branch fa6f34a] Oops
+ 1 file changed, 1 insertion(+), 13 deletions(-)
+grc-russia:website hhester$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+grc-russia:website hhester$ git branch -D test-branch
+Deleted branch test-branch (was fa6f34a).
+grc-russia:website hhester$ git log
+commit 5e22bd533e457b1bac1b2fed1f09e942b6986a3c
+Author: Hannah Hester <hhester@calpoly.edu>
+Date:   Thu Jan 19 11:58:26 2017 -0800
+
+    Add a link to the About page
+
+commit ec6329cc47068afaf55fb84ce50a41f405b25d07
+Author: Hannah Hester <hhester@calpoly.edu>
+Date:   Thu Jan 19 11:56:46 2017 -0800
+
+    Add About page
+
+commit ad444e25ae534553c705471a5c138cdeac7a3fd7
+Author: Hannah Hester <hhester@calpoly.edu>
+Date:   Thu Jan 19 11:52:08 2017 -0800
+
+    add
+
+commit c817dce261487ab2d22ab8c553a931dc07f0575e
+Author: Hannah Hester <hhester@calpoly.edu>
+Date:   Thu Jan 19 11:39:55 2017 -0800
+
+    Add untracked files
+
+...skipping...
+
+commit a0de4d0eb10f4a68036569ba6c9d47711cc61c20
+Author: Hannah Hester <hhester@calpoly.edu>
+Date:   Wed Jan 18 09:19:20 2017 -0800
+
+    Add content to index.html
+
+commit 0abf10f4a205d90c951eb0494dac775d6d217e9a
+Author: Hannah Hester <hhester@calpoly.edu>
+Date:   Wed Jan 18 09:16:14 2017 -0800
+
+    Add bar
+
+commit faf8f843e5fe506a74341c9b660cc71f3523d960
+Author: Hannah Hester <hhester@calpoly.edu>
+Date:   Wed Jan 18 09:15:01 2017 -0800
+
+    Intialize repository
+
+commit c0e21dab59245afb0242e2bfdaccaacb694e7292
+Author: Hannah Hester <hhester@calpoly.edu>
+Date:   Wed Jan 18 09:09:29 2017 -0800
+
+    Initialize repository
+grc-russia:website hhester$ git checkout a0de4d0eb10f4a68036569ba6c9d47711cc61c20
+Note: checking out 'a0de4d0eb10f4a68036569ba6c9d47711cc61c20'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at a0de4d0... Add content to index.html
+grc-russia:website hhester$ git checkout master
+Previous HEAD position was a0de4d0... Add content to index.html
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+grc-russia:website hhester$ touch test
+grc-russia:website hhester$ git add test
+grc-russia:website hhester$ git checkout -f
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+grc-russia:website hhester$ git touch test
+git: 'touch' is not a git command. See 'git --help'.
+grc-russia:website hhester$ touch test
+grc-russia:website hhester$ git add test
+grc-russia:website hhester$ git checkout --force
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+grc-russia:website hhester$ git help checkout
+grc-russia:website hhester$ ls
+DS_Store			foo
+README.md			hhester_GIT lab.pdf
+Terminal Saved Output.txt	images
+Terminal Saved Outputv2.txt	index.html
+about.html			test-branch
+bar				~$itignore.docx
+baz
+grc-russia:website hhester$ cd
+grc-russia:~ hhester$ ls
+Applications	Downloads	Music		repos
+Desktop		Library		Pictures
+Documents	Movies		Public
+grc-russia:~ hhester$ mkdir tmp/
+grc-russia:~ hhester$ ls
+Applications	Downloads	Music		repos
+Desktop		Library		Pictures	tmp
+Documents	Movies		Public
+grc-russia:~ hhester$ cd tmp/
+grc-russia:tmp hhester$ git clone https://github.com/hhester/website.git website-copy
+Cloning into 'website-copy'...
+remote: Counting objects: 45, done.
+remote: Compressing objects: 100% (26/26), done.
+remote: Total 45 (delta 16), reused 38 (delta 14), pack-reused 0
+Unpacking objects: 100% (45/45), done.
+grc-russia:tmp hhester$ cd website-copy
+grc-russia:website-copy hhester$ git diff
+diff --git a/index.html b/index.html
+index 1811865..d3977b0 100644
+--- a/index.html
++++ b/index.html
+@@ -5,6 +5,7 @@
+     </head>
+     <body>
+         <h1>hello, world </h1>
++        <a href="about.html"> About this project</a>
+         <p> Call me Ishmael.</p>
+         <img src="images/breaching_whale.jpg">
+     </body>
+grc-russia:website-copy hhester$ git commit -am "add link to tutorial title"
+[master facb498] add link to tutorial title
+ 1 file changed, 1 insertion(+)
+grc-russia:website-copy hhester$ it push
+-bash: it: command not found
+grc-russia:website-copy hhester$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 336 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/hhester/website.git
+   31982db..facb498  master -> master
+grc-russia:website-copy hhester$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	about.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+grc-russia:website-copy hhester$ git diff
+grc-russia:website-copy hhester$ git commit -am "Add link to about page"
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+	about.html
+
+nothing added to commit but untracked files present
+grc-russia:website-copy hhester$ gitt add -A
+-bash: gitt: command not found
+grc-russia:website-copy hhester$ git add -A
+grc-russia:website-copy hhester$ get aommit "Add link to about page"
+-bash: get: command not found
+grc-russia:website-copy hhester$ git commit "Add link to about page"
+error: pathspec 'Add link to about page' did not match any file(s) known to git.
+grc-russia:website-copy hhester$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   about.html
+
+grc-russia:website-copy hhester$ git commit -A
+error: unknown switch `A'
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup <commit>      use autosquash formatted message to fixup specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    -s, --signoff         add Signed-off-by:
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <default>   how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+
+grc-russia:website-copy hhester$ gitstatus
+-bash: gitstatus: command not found
+grc-russia:website-copy hhester$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   about.html
+
+grc-russia:website-copy hhester$ git commit about.html
+Aborting commit due to empty commit message.
+grc-russia:website-copy hhester$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   about.html
+
+grc-russia:website-copy hhester$ git diff
+grc-russia:website-copy hhester$ git commit -am "add about page link"
+[master 49797d4] add about page link
+ 1 file changed, 13 insertions(+)
+ create mode 100644 about.html
+grc-russia:website-copy hhester$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 487 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/hhester/website.git
+   facb498..49797d4  master -> master
+grc-russia:website-copy hhester$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+grc-russia:website-copy hhester$ cd ..
+grc-russia:tmp hhester$ ls
+website-copy
+grc-russia:tmp hhester$ cd ..
+grc-russia:~ hhester$ ;s
+-bash: syntax error near unexpected token `;'
+grc-russia:~ hhester$ ls
+Applications	Downloads	Music		repos
+Desktop		Library		Pictures	tmp
+Documents	Movies		Public
+grc-russia:~ hhester$ cd repos
+grc-russia:repos hhester$ cd website
+grc-russia:website hhester$ ls
+DS_Store			foo
+README.md			hhester_GIT lab.pdf
+Terminal Saved Output.txt	images
+Terminal Saved Outputv2.txt	index.html
+about.html			test-branch
+bar				~$itignore.docx
+baz
+grc-russia:website hhester$ git pull
+remote: Counting objects: 10, done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 10 (delta 5), reused 6 (delta 3), pack-reused 0
+Unpacking objects: 100% (10/10), done.
+From https://github.com/hhester/website
+   c817dce..49797d4  master     -> origin/master
+Removing ~$itignore.docx
+Auto-merging about.html
+CONFLICT (add/add): Merge conflict in about.html
+Removing .gitignore.docx
+Automatic merge failed; fix conflicts and then commit the result.
+grc-russia:website hhester$ git log -p
+commit 5e22bd533e457b1bac1b2fed1f09e942b6986a3c
+Author: Hannah Hester <hhester@calpoly.edu>
+Date:   Thu Jan 19 11:58:26 2017 -0800
+
+    Add a link to the About page
+
+diff --git a/index.html b/index.html
+index 1811865..d3977b0 100644
+--- a/index.html
++++ b/index.html
+@@ -5,6 +5,7 @@
+     </head>
+     <body>
+         <h1>hello, world </h1>
++        <a href="about.html"> About this project</a>
+         <p> Call me Ishmael.</p>
+         <img src="images/breaching_whale.jpg">
+     </body>
+
+commit ec6329cc47068afaf55fb84ce50a41f405b25d07
+Author: Hannah Hester <hhester@calpoly.edu>
+Date:   Thu Jan 19 11:56:46 2017 -0800
+
+    Add About page
+...skipping...
+
+diff --git a/bar b/bar
+new file mode 100644
+index 0000000..e69de29
+
+commit faf8f843e5fe506a74341c9b660cc71f3523d960
+Author: Hannah Hester <hhester@calpoly.edu>
+Date:   Wed Jan 18 09:15:01 2017 -0800
+
+    Intialize repository
+
+diff --git a/foo b/foo
+new file mode 100644
+index 0000000..e69de29
+
+commit c0e21dab59245afb0242e2bfdaccaacb694e7292
+Author: Hannah Hester <hhester@calpoly.edu>
+Date:   Wed Jan 18 09:09:29 2017 -0800
+
+    Initialize repository
+
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000..e69de29
+grc-russia:website hhester$ git commit -am "update link"
+[master c07548e] update link
+grc-russia:website hhester$ git push
+Counting objects: 12, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (12/12), 1.32 KiB | 0 bytes/s, done.
+Total 12 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas: 100% (7/7), completed with 4 local objects.
+To https://github.com/hhester/website.git
+   49797d4..c07548e  master -> master
+grc-russia:website hhester$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Terminal Saved Outputv2.txt
+	test-branch
+
+nothing added to commit but untracked files present (use "git add" to track)
+grc-russia:website hhester$ cd ..
+grc-russia:repos hhester$ cd ..
+grc-russia:~ hhester$ ls
+Applications	Downloads	Music		repos
+Desktop		Library		Pictures	tmp
+Documents	Movies		Public
+grc-russia:~ hhester$ cd tmp
+grc-russia:tmp hhester$ ls
+website-copy
+grc-russia:tmp hhester$ cd website-copy
+grc-russia:website-copy hhester$ git pull
+remote: Counting objects: 12, done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 12 (delta 7), reused 12 (delta 7), pack-reused 0
+Unpacking objects: 100% (12/12), done.
+From https://github.com/hhester/website
+   49797d4..c07548e  master     -> origin/master
+Updating 49797d4..c07548e
+Fast-forward
+ .DS_Store   | Bin 6148 -> 6148 bytes
+ .gitnignore |   2 ++
+ DS_Store    | Bin 0 -> 6148 bytes
+ index.html  |   2 ++
+ 4 files changed, 4 insertions(+)
+ create mode 100644 .gitnignore
+ create mode 100644 DS_Store
+grc-russia:website-copy hhester$ git log -p
+commit c07548e41f691be558834b035a90bd534682a9dd
+Merge: 5e22bd5 49797d4
+Author: Hannah Hester <hhester@calpoly.edu>
+Date:   Mon Jan 23 10:49:52 2017 -0800
+
+    update link
+
+commit 49797d4a46a1eb2c1a1acc2f76e090a9dd6c254b
+Author: Hannah Hester <hhester@calpoly.edu>
+Date:   Mon Jan 23 10:45:48 2017 -0800
+
+    add about page link
+
+diff --git a/about.html b/about.html
+new file mode 100644
+index 0000000..b776092
+--- /dev/null
++++ b/about.html
+@@ -0,0 +1,13 @@
++<!DOCTYPE html>
++<html>
++    <head>
++        <title>About Us</title>
++    </head>
+...skipping...
+
+diff --git a/bar b/bar
+new file mode 100644
+index 0000000..e69de29
+
+commit faf8f843e5fe506a74341c9b660cc71f3523d960
+Author: Hannah Hester <hhester@calpoly.edu>
+Date:   Wed Jan 18 09:15:01 2017 -0800
+
+    Intialize repository
+
+diff --git a/foo b/foo
+new file mode 100644
+index 0000000..e69de29
+
+commit c0e21dab59245afb0242e2bfdaccaacb694e7292
+Author: Hannah Hester <hhester@calpoly.edu>
+Date:   Wed Jan 18 09:09:29 2017 -0800
+
+    Initialize repository
+
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000..e69de29
+grc-russia:website-copy hhester$ cd ..
+grc-russia:tmp hhester$ cd ..
+grc-russia:~ hhester$ ls
+Applications	Downloads	Music		repos
+Desktop		Library		Pictures	tmp
+Documents	Movies		Public
+grc-russia:~ hhester$ cd repos
+grc-russia:repos hhester$ cd website
+grc-russia:website hhester$ git commit -am "Chang epage heading"
+[master 1d88a90] Chang epage heading
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+grc-russia:website hhester$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 298 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/hhester/website.git
+   c07548e..1d88a90  master -> master
+grc-russia:website hhester$ cd ..
+grc-russia:repos hhester$ cd ..
+grc-russia:~ hhester$ ls
+Applications	Downloads	Music		repos
+Desktop		Library		Pictures	tmp
+Documents	Movies		Public
+grc-russia:~ hhester$ cd tmp
+grc-russia:tmp hhester$ cd website-copy
+grc-russia:website-copy hhester$ ls
+DS_Store			baz
+README.md			foo
+Terminal Saved Output.txt	hhester_GIT lab.pdf
+about.html			images
+bar				index.html
+grc-russia:website-copy hhester$ curl -ocurl -o images/polar_bear.jpg \
+> -OL cdn.learnenough.com/polar_bear.jpg
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:100 74961  100 74961    0     0  80095      0 --:--:-- --:--:-- --:--:--  411k
+grc-russia:website-copy hhester$ git add -A
+grc-russia:website-copy hhester$ git commit -m "Add an image"
+[master b270712] Add an image
+ 4 files changed, 1 insertion(+), 2 deletions(-)
+ create mode 100644 curl
+ create mode 100644 images/polar_bear.jpg
+grc-russia:website-copy hhester$ git push
+To https://github.com/hhester/website.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/hhester/website.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+grc-russia:website-copy hhester$ git pull
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 3 (delta 2), reused 3 (delta 2), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/hhester/website
+   c07548e..1d88a90  master     -> origin/master
+Merge made by the 'recursive' strategy.
+ about.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+grc-russia:website-copy hhester$ git push
+Counting objects: 8, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 73.78 KiB | 0 bytes/s, done.
+Total 8 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To https://github.com/hhester/website.git
+   1d88a90..557c0dc  master -> master
+grc-russia:website-copy hhester$ cd ..
+grc-russia:tmp hhester$ cd ..
+grc-russia:~ hhester$ ls
+Applications	Downloads	Music		repos
+Desktop		Library		Pictures	tmp
+Documents	Movies		Public
+grc-russia:~ hhester$ cd repos
+grc-russia:repos hhester$ cd website
+grc-russia:website hhester$ ls
+DS_Store			baz
+README.md			foo
+Terminal Saved Output.txt	hhester_GIT lab.pdf
+Terminal Saved Outputv2.txt	images
+about.html			index.html
+bar				test-branch
+grc-russia:website hhester$ git pull
+remote: Counting objects: 8, done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 8 (delta 4), reused 8 (delta 4), pack-reused 0
+Unpacking objects: 100% (8/8), done.
+From https://github.com/hhester/website
+   1d88a90..557c0dc  master     -> origin/master
+Updating 1d88a90..557c0dc
+error: Your local changes to the following files would be overwritten by merge:
+	.DS_Store
+Please commit your changes or stash them before you merge.
+Aborting
+grc-russia:website hhester$ ls
+DS_Store			baz
+README.md			foo
+Terminal Saved Output.txt	hhester_GIT lab.pdf
+Terminal Saved Outputv2.txt	images
+about.html			index.html
+bar				test-branch
+grc-russia:website hhester$ cd..
+-bash: cd..: command not found
+grc-russia:website hhester$  cd..
+-bash: cd..: command not found
+grc-russia:website hhester$ cd ..
+grc-russia:repos hhester$ ls
+website
+grc-russia:repos hhester$ cd ..
+grc-russia:~ hhester$ cd tmp
+grc-russia:tmp hhester$ cd website-copy
+grc-russia:website-copy hhester$ git commit -am "add image alt"
+[master caf5b50] add image alt
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+grc-russia:website-copy hhester$ git push
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 471 bytes | 0 bytes/s, done.
+Total 4 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+giTo https://github.com/hhester/website.git
+   557c0dc..caf5b50  master -> master
+grc-russia:website-copy hhester$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	images/.DS_Store
+
+nothing added to commit but untracked files present (use "git add" to track)
+grc-russia:website-copy hhester$ cd ..
+grc-russia:tmp hhester$ cd ..
+grc-russia:~ hhester$ cd repos
+grc-russia:repos hhester$ cd website
+grc-russia:website hhester$ git pull
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 4 (delta 3), reused 4 (delta 3), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+From https://github.com/hhester/website
+   557c0dc..caf5b50  master     -> origin/master
+Updating 1d88a90..caf5b50
+error: Your local changes to the following files would be overwritten by merge:
+	.DS_Store
+	index.html
+Please commit your changes or stash them before you merge.
+error: The following untracked working tree files would be overwritten by merge:
+	images/polar_bear.jpg
+Please move or remove them before you merge.
+Aborting
+grc-russia:website hhester$ git status
+On branch master
+Your branch is behind 'origin/master' by 3 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   .DS_Store
+	modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Terminal Saved Outputv2.txt
+	images/.DS_Store
+	images/polar_bear.jpg
+	test-branch
+
+no changes added to commit (use "git add" and/or "git commit -a")
+grc-russia:website hhester$ git add -A
+grc-russia:website hhester$ git commit -am
+error: switch `m' requires a value
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup <commit>      use autosquash formatted message to fixup specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    -s, --signoff         add Signed-off-by:
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <default>   how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+
+grc-russia:website hhester$ git push
+To https://github.com/hhester/website.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/hhester/website.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+grc-russia:website hhester$ git status
+On branch master
+Your branch is behind 'origin/master' by 3 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   .DS_Store
+	new file:   Terminal Saved Outputv2.txt
+	new file:   images/.DS_Store
+	new file:   images/polar_bear.jpg
+	modified:   index.html
+	new file:   test-branch
+
+grc-russia:website hhester$ git commit -a "add polar bear"
+fatal: Paths with -a does not make sense.
+grc-russia:website hhester$ git commit -am "Add polar bear"
+[master 644718a] Add polar bear
+ 6 files changed, 1646 insertions(+), 1 deletion(-)
+ create mode 100644 Terminal Saved Outputv2.txt
+ create mode 100644 images/.DS_Store
+ create mode 100644 images/polar_bear.jpg
+ create mode 100644 test-branch
+grc-russia:website hhester$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 3 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+nothing to commit, working tree clean
+grc-russia:website hhester$ git log -p
+commit 644718a6e5da2645a421c789c763a5ec51338a1d
+Author: Hannah Hester <hhester@calpoly.edu>
+Date:   Mon Jan 23 11:06:27 2017 -0800
+
+    Add polar bear
+
+diff --git a/.DS_Store b/.DS_Store
+index 86b9d4d..bd83d7d 100644
+Binary files a/.DS_Store and b/.DS_Store differ
+diff --git a/Terminal Saved Outputv2.txt b/Terminal Saved Outputv2.txt
+new file mode 100644
+index 0000000..6244965
+--- /dev/null
++++ b/Terminal Saved Outputv2.txt       
+@@ -0,0 +1,1645 @@
++Last login: Thu Jan 19 11:01:39 on console
++grc-russia:~ hhester$ git status
++fatal: Not a git repository (or any of the parent directories): .git
++grc-russia:~ hhester$ .git status
++-bash: .git: command not found
++grc-russia:~ hhester$ ld
++ld: no object files specified
++grc-russia:~ hhester$ ls
++Applications   Documents       Library         Music           Public
+...skipping...
+
+diff --git a/bar b/bar
+new file mode 100644
+index 0000000..e69de29
+
+commit faf8f843e5fe506a74341c9b660cc71f3523d960
+Author: Hannah Hester <hhester@calpoly.edu>
+Date:   Wed Jan 18 09:15:01 2017 -0800
+
+    Intialize repository
+
+diff --git a/foo b/foo
+new file mode 100644
+index 0000000..e69de29
+
+commit c0e21dab59245afb0242e2bfdaccaacb694e7292
+Author: Hannah Hester <hhester@calpoly.edu>
+Date:   Wed Jan 18 09:09:29 2017 -0800
+
+    Initialize repository
+
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000..e69de29
+grc-russia:website hhester$ git add -A
+grc-russia:website hhester$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 3 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   index.html
+
+grc-russia:website hhester$ git commit -am "Add polar bear attribution"
+[master 92874d3] Add polar bear attribution
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+grc-russia:website hhester$ git push
+To https://github.com/hhester/website.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/hhester/website.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+grc-russia:website hhester$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 2 and 3 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+nothing to commit, working tree clean
+grc-russia:website hhester$ git checkout -b fix-trademark
+M	about.html
+M	index.html
+Switched to a new branch 'fix-trademark'
+grc-russia:website hhester$ git commit -am "add placeholders for the TM fix"
+[fix-trademark 566ef89] add placeholders for the TM fix
+ 2 files changed, 2 insertions(+)
+grc-russia:website hhester$ git push -u orgin fix-trademark
+fatal: 'orgin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+grc-russia:website hhester$ git push -u origin fix-trademark
+Counting objects: 15, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 83.89 KiB | 0 bytes/s, done.
+Total 15 (delta 9), reused 0 (delta 0)
+remote: Resolving deltas: 100% (9/9), completed with 4 local objects.
+To https://github.com/hhester/website.git
+ * [new branch]      fix-trademark -> fix-trademark
+Branch fix-trademark set up to track remote branch fix-trademark from origin.
+grc-russia:website hhester$ cd ..
+grc-russia:repos hhester$ cd ..
+grc-russia:~ hhester$ ls
+Applications	Downloads	Music		repos
+Desktop		Library		Pictures	tmp
+Documents	Movies		Public
+grc-russia:~ hhester$ cd tmp
+grc-russia:tmp hhester$ cd website-copy
+grc-russia:website-copy hhester$ git pull
+remote: Counting objects: 15, done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 15 (delta 9), reused 14 (delta 8), pack-reused 0
+Unpacking objects: 100% (15/15), done.
+From https://github.com/hhester/website
+ * [new branch]      fix-trademark -> origin/fix-trademark
+Already up-to-date.
+grc-russia:website-copy hhester$ git branch
+* master
+grc-russia:website-copy hhester$ git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/fix-trademark
+  remotes/origin/master
+grc-russia:website-copy hhester$ git checkout fix-trademark
+error: Your local changes to the following files would be overwritten by checkout:
+	index.html
+Please commit your changes or stash them before you switch branches.
+error: The following untracked working tree files would be overwritten by checkout:
+	images/.DS_Store
+Please move or remove them before you switch branches.
+Aborting
+grc-russia:website-copy hhester$ git diff master
+diff --git a/index.html b/index.html
+index f8ca0c8..7864142 100644
+--- a/index.html
++++ b/index.html
+@@ -7,8 +7,8 @@
+         <h1>hello, world </h1>
+         <a href="about.html"> About this project</a>
+         <p> Call me Ishmael.</p>
+-        <a href="https://www.flickr.com/photos/28883788@N04/10097824543">
+-        <img src="images/breaching_whale.jpg" alt="Breaching whale">
++        <a href="https://www.flickr.com/photos/puliarfanita/22959238329">
++        <img src="images/polar_bear.jpg" alt="Polar bear">
+         </a>
+     </body>
+ </html>
+\ No newline at end of file
+grc-russia:website-copy hhester$ 
